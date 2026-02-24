@@ -1,0 +1,23 @@
+a ideia é fazer um programa que recebe um prompt (string), ele vai fingir que está processando,
+e então, ele vai retornar uma resposta aleatória pré-definida ao usuário
+
+[RESPOSTAS PRÉ-DEFINIDAS, pode estar diferente no código]
+- Sim
+- Não
+- Depende
+- Não entendi o que você quis dizer
+- Auto-destruição ativada
+- Vi você pela webcam, e te achei bem bonita
+- HAHAHAHAHAHAHA!
+- Paia.
+- Comi o cu de quem tá lendo
+- Que piada.
+- É uma boa pergunta...
+- Não sei.
+- *mensagem de erro, (tem um arquivo de teste, só copiar e colar)
+- *realizando compra online (finge que tá usando o cartão de crédito do usuário)
+- Lá ele!
+- Ops! Parece que voce está offline, certifique-se de que voce esteja conectado a internet para continuar. 
+
+pensei em fazer dps de mandar 10 msgs uma telinha de "assine o premium", onde tem o algoritmo de lunh pra verificar o cartão, sla
+- Curta a inteligência artificial sem parar com o ""IA premium"", use offline, faça prompts sem limites de caracteres, e obtenha respostas mais precisas com nosso processamento híbrido, clique no banner e saiba mais (pode ser ativado caso o usuário mande 10 mensagens, e pode tocar a música de anúncio do spotify pra entrar no clima)

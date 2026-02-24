@@ -1,0 +1,8 @@
+#não enviarei os assets ainda
+Assets/
+
+#arquivo do vs code
+*.code-workspace
+
+#arquivos executáveis
+*.out
