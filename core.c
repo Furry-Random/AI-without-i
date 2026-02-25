@@ -9,17 +9,14 @@
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
 
 //função que pede um "prompt" pro usuário, puro fingimento
-void usr_input(){
-
-    char prompt[MAX_PROMPT];
+void usr_input(char str[]){
     
-    printf("User: "); //indica que é pro usuário digitar
-    fgets(prompt, sizeof(prompt), stdin); //atribui com fgets
-    prompt[strcspn(prompt, "\n")] = '\0'; //remove o '\n' e troca por '\0'
+    printf("User: ");               //indica que é pro usuário digitar
+    fgets(str, MAX_PROMPT, stdin); //atribui com fgets
+    str[strcspn(str, "\n")] = '\0'; //remove o '\n' e troca por '\0'
+    setbuf(stdin, NULL);            //limpa o buffer
 
-    printf("[DEBUG] Prompt: %s\n", prompt);
-
-    /*scanf está dando muito problema, faz string msm*/
+    printf("[DEBUG] Prompt: %s\n", str);
 }
 
 //função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
@@ -29,7 +26,7 @@ void n_random_response(int *n, int *i){
 
         *n = (rand() % 16) + 1;
         *i = *i + 1;       //incrementa o contador de msgs
-    } else {        //atingiu o limite de mensagens
+    } else {               //atingiu o limite de mensagens
         ia_premium_ad();
     }
 }
