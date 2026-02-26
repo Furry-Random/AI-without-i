@@ -8,7 +8,7 @@ void usr_input();
 void clear_terminal();
 
 //função que sorteia e retorna um número aleatório
-void n_random_response(int *dado_r, int *i);
+void n_random_response(int *dado_r, int *i, bool usr_free);
 
 //função que imprime no terminal a resposta aleatória definida por "n_random_response(int *dado);"
 void print_response(int dado_r);

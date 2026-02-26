@@ -20,14 +20,19 @@ void usr_input(char str[]){
 }
 
 //função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
-void n_random_response(int *n, int *i){
+void n_random_response(int *n, int *i, bool usr_free){
 
-    if (*i < 9) { //nao atingiu o limite de mensagens
+    if (*i >= 9 && usr_free) { //atingiu o limite de mensagens e o plano é gratuíto
 
-        *n = (rand() % 16) + 1;
-        *i = *i + 1;       //incrementa o contador de msgs
-    } else {               //atingiu o limite de mensagens
         ia_premium_ad();
+    } else { //não atingiu o limite de mensagens ou o plano é premium
+        *n = (rand() % 16) + 1;
+        
+        //incrementa o contador de msgs se o usuário for do "plano free"
+        if (usr_free) { 
+            
+            *i = *i + 1;
+        }
     }
 }
 
