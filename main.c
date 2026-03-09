@@ -54,8 +54,8 @@ int main(){
         }
 
         falso_processamento(prompt);
-        dado_r = n_random_response(&cont_msg, usr_free); //a IA gera um número aleatório
-        print_response(dado_r);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
+        dado_r = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
+        print_free_response(dado_r);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
     }
     
     return 0;

@@ -19,8 +19,9 @@ void usr_input(char str[]){
     setbuf(stdin, NULL);            //limpa o buffer
 }
 
-//função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
-int n_random_response(int *i, bool usr_free){
+/*função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
+para usuário FREE*/
+int n_random_free_response(int *i, bool usr_free){
 
     int n = (rand() % QTD_RESPOSTA_FREE) + 1;
     
@@ -32,8 +33,8 @@ int n_random_response(int *i, bool usr_free){
     return n;
 }
 
-//função que imprime no terminal a resposta aleatória definida por "n_random_response(int *dado);"
-void print_response(int dado_r){
+//função que imprime no terminal a resposta aleatória para usuário FREE
+void print_free_response(int dado_r){
 
     printf("IA: ");
 

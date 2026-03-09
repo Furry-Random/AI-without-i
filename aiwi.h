@@ -7,14 +7,15 @@ void usr_input(char str[]);
 //função que limpa o terminal dependendo do sistema operacional
 void clear_terminal();
 
-//função que sorteia e retorna um número aleatório
-int n_random_response(int *i, bool usr_free);
+/*função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
+para usuário FREE*/
+int n_random_free_response(int *i, bool usr_free);
 
 //imprime uma saudacao dependendo do valor de n (dado_saud)
 void print_saudacao(int n);
 
-//função que imprime no terminal a resposta aleatória definida por "n_random_response(int *dado);"
-void print_response(int dado_r);
+//função que imprime no terminal a resposta aleatória para usuário FREE
+void print_free_response(int dado_r);
 
 //funcao que trava o usuário em uma tela de "assinatura de plano premium"
 void ia_premium_ad();

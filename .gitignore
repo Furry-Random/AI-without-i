@@ -1,9 +1,6 @@
 #não enviarei os assets ainda
 Assets/
 
-#nem o fluxograma
-*.pdf
-
 #arquivo do vs code
 *.code-workspace
 
