@@ -7,45 +7,29 @@
 #include "aiwi.h"
 
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
+#define QTD_RESPOSTA_FREE 16 //quantidade de mensagens pré-definidas do plano free
 
 //função que pede um "prompt" pro usuário, puro fingimento
 void usr_input(char str[]){
     
-    printf("User: ");               //indica que é pro usuário digitar
-    fgets(str, MAX_PROMPT, stdin); //atribui com fgets
+    printf("User: ");
+    fgets(str, MAX_PROMPT, stdin);
+
     str[strcspn(str, "\n")] = '\0'; //remove o '\n' e troca por '\0'
     setbuf(stdin, NULL);            //limpa o buffer
-
-    printf("[DEBUG] Prompt: %s\n", str);
 }
 
 //função que sorteia um número aleatório para selecionar uma das respostas pré-definidas
-void n_random_response(int *n, int *i, bool usr_free){
+int n_random_response(int *i, bool usr_free){
 
-    if (*i >= 9 && usr_free) { //atingiu o limite de mensagens e o plano é gratuíto
+    int n = (rand() % QTD_RESPOSTA_FREE) + 1;
+    
+    if (usr_free) {
 
-        ia_premium_ad();
-    } else { //não atingiu o limite de mensagens ou o plano é premium
-        *n = (rand() % 16) + 1;
-        
-        //incrementa o contador de msgs se o usuário for do "plano free"
-        if (usr_free) { 
-            
-            *i = *i + 1;
-        }
+        *i = *i + 1;
     }
-}
 
-//função que limpa o terminal dependendo do sistema operacional
-void clear_terminal(){
-
-    #ifdef __linux__
-        system("clear");
-
-    #elif _WIN32
-        system("cls");
-
-    #endif
+    return n;
 }
 
 //função que imprime no terminal a resposta aleatória definida por "n_random_response(int *dado);"
@@ -75,8 +59,9 @@ void print_response(int dado_r){
         /*aí vc vê como executar um som de tensão e um vídeo
         de explosão*/
         
-        sleep(5);
-        close_ia();
+        //sleep(5);
+        //exit(0);
+        break;
 
     case 6:
         printf("Eu vi voce pela webcam, e te achei muito bonita...\n");
@@ -111,7 +96,7 @@ void print_response(int dado_r){
         break;
 
     case 14:
-        printf("COMPRA APROVADA NO VALOR DE RS 3.799,90 NO CARTAO MASTERCARD, FINAL 6669\n"); //6669 é uma piada interna, calma
+        printf("Eu me recuso a explicar o assunto de maneira mais simples.\n");
         break;
 
     case 15:
@@ -119,13 +104,7 @@ void print_response(int dado_r){
         break;
 
     case 16:
-        printf("Ops! Parece que voce está offline, certifique-se de que voce esteja conectado a internet para continuar.\n");
+        printf("Voce está conectado a internet? Eu nao consegui me conectar a carteira bitcoin para realizar a mineracao neste computador.\n");
         break;
     }
-}
-
-//função que fecha o programa
-void close_ia(){
-
-    exit(0);
 }
