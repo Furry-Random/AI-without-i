@@ -1,6 +1,15 @@
 a ideia é fazer um programa que recebe um prompt (string), ele vai fingir que está processando,
 e então, ele vai retornar uma resposta aleatória pré-definida ao usuário
 
+[SONS][README]
+Tem que ensinar o usuário de linuq a habilitar sons no terminal antes de executar o software.
+
+[SOBRE COMPATIBILIDADE]
+De início eu vou desenvolver o software para linux, e depois que a versão de linux
+estiver pronta eu jogo o código para a main, e depois eu abro uma branch
+nova, (windows-compability) e me viro pro código funcionar nos dois sistemas, quando
+o software funcionar nos dois sistemas, eu jogo o código cross-plataform para a main. 
+
 [RESPOSTAS PRÉ-DEFINIDAS, pode estar diferente no código]
 - Sim
 - Não
@@ -21,3 +30,13 @@ e então, ele vai retornar uma resposta aleatória pré-definida ao usuário
 
 pensei em fazer dps de mandar 10 msgs uma telinha de "assine o premium", onde tem o algoritmo de lunh pra verificar o cartão, sla
 - Curta a inteligência artificial sem parar com o ""IA premium"", use offline, faça prompts sem limites de caracteres, e obtenha respostas mais precisas com nosso processamento híbrido, clique no banner e saiba mais (pode ser ativado caso o usuário mande 10 mensagens, e pode tocar a música de anúncio do spotify pra entrar no clima)
+
+[IDEIA DA FUNÇÃO DE AUTO-DESTRUIÇÃO]
+- Verifique o SO
+    - caso Windows:
+        1 importe Windows.h 
+        2 faça bips com a função Beep();
+
+    - caso Linux:
+        1 execute o comando paplay "nome_do_som.mp3"
+        2 use Sleep

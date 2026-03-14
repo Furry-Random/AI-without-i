@@ -217,3 +217,42 @@ void falso_processamento(char str[]){
 
     printf("\n");
 }
+
+//finge auto-destruição e fecha o programa
+void auto_destruicao(){
+
+    clear_terminal();
+
+    system("paplay Assets/ativando_bomba.mp3");
+    usleep(500000);
+
+    printf("Auto-destruicao ativada!\n\n");
+    system("paplay Assets/bomb_planted.mp3");
+    usleep(250000);
+
+    for (int i = 10; i > 0; i--) {
+
+        printf("%d...\n", i);
+        system("paplay Assets/bip.mp3");
+        usleep(i * 100000);
+    }
+
+    //imprime uma bomba nuclear
+    printf("                             ____\n");
+    printf("                     __,-~~/~    `---.\n");
+    printf("                   _/_,---(      ,    )\n");
+    printf("               __ /        <    /   )  \\___\n");
+    printf("- ------===;;;'====------------------===;;;===----- -  -\n");
+    printf("                  \\/  ~""~""~""~""~""~\\~""~)~""/"" \n");
+    printf("                  (_ (   \\  (     >    \\)\n");
+    printf("                   \\_( _ <         >_>'"""" \n");
+    printf("                      ~ `-i' ::>|--""""\n");
+    printf("                          I;|.|.|\n");
+    printf("                         <|i::|i|`.\n");
+    printf("                        (` ^'""`-' "")\n");
+
+    system("paplay Assets/boom.mp3");
+    clear_terminal();
+
+    exit(0);
+}

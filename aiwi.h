@@ -29,4 +29,10 @@ void falso_processamento(char str[]);
 //finge que a IA está se conectando ao servidor
 void falsa_conexao();
 
+//finge auto-destruição e fecha o programa
+void auto_destruicao();
+
+//joga uma moeda e retorna true (moeda = 1) ou false (moeda = 0)
+bool cara_coroa();
+
 #endif

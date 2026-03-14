@@ -29,7 +29,7 @@ int main(){
     //exibe a saudação
     int dado_saud = (rand() % MAX_SAUDACAO) + 1;
     print_saudacao(dado_saud);
-    sleep(2);                   
+    sleep(1);                   
 
     while (true) {
 
@@ -48,7 +48,7 @@ int main(){
             //exibe a saudaçao novamente
             dado_saud = (rand() % MAX_SAUDACAO) + 1;
             print_saudacao(dado_saud);
-            sleep(2);
+            sleep(1);
 
             usr_input(prompt);
         }
