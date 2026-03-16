@@ -40,3 +40,6 @@ pensei em fazer dps de mandar 10 msgs uma telinha de "assine o premium", onde te
     - caso Linux:
         1 execute o comando paplay "nome_do_som.mp3"
         2 use Sleep
+
+[AGRADECIMENTOS]
+- Renato (me ajudou a pensar nos anúncios de vendedores de curso que vendem curso e nos anuncios sobre bets)
