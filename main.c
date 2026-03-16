@@ -35,6 +35,7 @@ int main(){
     while (true) {
 
         usr_input(prompt); //o usuário digita um prompt
+        //[TODO], chame a funcao que verifica se prompt == "SAIR" aqui
         
         if (cont_msg >= MAX_MSG && usr_free) {
             
@@ -52,6 +53,7 @@ int main(){
             sleep(1);
 
             usr_input(prompt);
+            //[TODO], chame a funcao que verifica se prompt == "SAIR" aqui
         }
 
         falso_processamento(prompt);
