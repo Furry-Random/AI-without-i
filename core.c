@@ -8,6 +8,7 @@
 
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
 #define QTD_RESPOSTA_FREE 16 //quantidade de mensagens pré-definidas do plano free
+#define QTD_ADS 10 //quantidade de anúncios pré-definidos para o plano free
 
 //função que pede um "prompt" pro usuário, puro fingimento
 void usr_input(char str[]){
@@ -104,4 +105,13 @@ void print_free_response(int dado_r){
         printf("Voce está conectado a internet? Eu nao consegui me conectar a carteira bitcoin para realizar a mineracao neste computador.\n");
         break;
     }
+}
+
+//gera um numero aleatorio para escolher um falso anuncio pré-definido 
+int n_random_ad(){
+
+    int n = (rand() % QTD_ADS) + 1;
+
+    return n;
+
 }

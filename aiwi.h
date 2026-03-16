@@ -32,7 +32,10 @@ void falsa_conexao();
 //finge auto-destruição e fecha o programa
 void auto_destruicao();
 
-//joga uma moeda e retorna true (moeda = 1) ou false (moeda = 0)
-bool cara_coroa();
+//gera um numero aleatorio para escolher um falso anuncio pré-definido 
+int n_random_ad();
+
+//exibe um anuncio de acordo com o numero gerado por "n_random_ad()"
+void print_ad(int n);
 
 #endif

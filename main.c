@@ -18,7 +18,8 @@ int main(){
     char prompt[MAX_PROMPT]; //armazena o prompt do usuário
     bool usr_free = true;    /*diz se o usuário está usando o "plano gratuíto" ou o "plano premium"
     sempre começa com o plano free*/
-    
+    int n_ad; //armazena o número aleatório para escolher um anuncio aleatorio
+
     //ajustes
     srand(time(NULL));       //seta uma semente para gerar os números aleatórios
     clear_terminal();        //deixa o terminal limpinho pra usar o software
@@ -56,6 +57,13 @@ int main(){
         falso_processamento(prompt);
         dado_r = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
         print_free_response(dado_r);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
+
+        //exibe um anuncio, caso o usuário seja free
+        if (usr_free) {
+
+            n_ad = n_random_ad();
+            print_ad(n_ad);
+        }
     }
     
     return 0;

@@ -230,12 +230,15 @@ void auto_destruicao(){
     system("paplay Assets/bomb_planted.mp3");
     usleep(250000);
 
-    for (int i = 10; i > 0; i--) {
+    for (int i = 10; i > 1; i--) {
 
         printf("%d...\n", i);
         system("paplay Assets/bip.mp3");
         usleep(i * 100000);
     }
+
+    printf("1...\n");
+    system("paplay Assets/prestes_a_explodir.mp3");
 
     //imprime uma bomba nuclear
     printf("                             ____\n");
@@ -255,4 +258,55 @@ void auto_destruicao(){
     clear_terminal();
 
     exit(0);
+}
+
+//exibe um anuncio de acordo com o numero gerado por "n_random_ad()"
+void print_ad(int n){
+
+    sleep(1);
+
+    printf("AD: ");
+    fflush(stdout);
+
+    switch (n){
+    case 1:
+        printf("Maes solteiras a 5km de distancia buscam relacionamentos quentes com jovens adultos, voce tem o sulficiente para deixar a rata seca? Clique no banner e saiba mais.\n");
+        break;
+    
+    case 2:
+        printf("Voce merece curtir musicas sem limites com o Esportify Premium, clique no banner e saiba mais.\n");
+        break;
+
+    case 3:
+        printf("Oi meu nome eh Bety, e eu tenho 1 milhao e meio de patrimonio acumulado no gatinho, clique no banner e saiba mais.\n");
+        break;
+
+    case 4:
+        printf("Viagem de ferias no CC! Viagem para o Triangulo das Bermudas com ate 30 porcento de desconto, viagem com ate 666 acompanhantes para a Garganta do Diabo com ate 66 porcento de desconto! Clique no banner e saiba mais.\n");
+        break;
+
+    case 5:
+        printf("Hoje, as 19:99, eu irei fazer o maior lancamento do Brasil, que eh o curso do 1 ao milhao, onde eu vou ensinar em 5 dias o metodo para voce sair de um patrimonio de apenas 1 espiga para 1 milhao de sabugos, e as 5 mil primeiras pessoas que adquirirem o curso, terao acesso a plataforma premium, onde elas terao uma experiencia sem anuncios na plataforma, clique no banner e saiba mais.\n");
+        break;
+
+    case 6:
+        printf("Adiquira chaves de Winderson 10 e escritorio 3000 por apenas 20 conto na 123Mau, clique no banner e saiba mais.\n");
+        break;
+
+    case 7:
+        printf("Fature 999999999999999999999999999999999999 dinheiros com a bosta_de_cavalo_coin, a moeda do momento, clique no banner e saiba mais.\n");
+        break;
+
+    case 8:
+        printf("Se voce nao tem um Jaguara le-corsa, uma mulher com 3kg de peito e 7kg de bunda e 3 bilhoes de quanzas na conta, voce eh um frago assado, e se voce quer deixar de ser humilhado por mim, entao clique no link da bio ou no banner e saiba mais.\n");
+        break;
+
+    case 9:
+        printf("Conte com o cartao que possui a taxa mais alta do mercado, clique no banner e abra sua conta no Zeh Pilantra Bank.\n");
+        break;
+
+    case 10:
+        printf("Eu estava cheio de dividas, pois o meu antigo emprego de programador nao me pagava bem, e o meu ex chefe ainda ficava o dia inteiro falando para trabalhar no codigo da empresa ao inves dos meus joke-virus, mas agora que eu conheci esse tal de subway money, eu pude deixar o meu chefe falando sozinho, e agora eu pago as contas de casa com apenas 2 horas de jogo por dia, clique no banner e use o meu codigo SOUBROXA69 para ganhar 2 reais de bonus.\n");
+        break;
+    }
 }
