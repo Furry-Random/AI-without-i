@@ -5,7 +5,7 @@ e então, ele vai retornar uma resposta aleatória pré-definida ao usuário
 Tem que ensinar o usuário de linuq a habilitar sons no terminal antes de executar o software.
 
 [BUGS][RISCO-MINIMO]
-Descobri que se o usuário pressionar a tecla "Enter", o prompt acaba recebendo "\n", pulando
+Descobri que se o usuário pressionar e segurar a tecla "Enter", o prompt acaba recebendo "\n", pulando
 a parte que o usuário digita o prompt, não é um bug crítico, então eu n sei se vou arrumar.
 
 [SOBRE COMPATIBILIDADE]
