@@ -4,6 +4,10 @@ e então, ele vai retornar uma resposta aleatória pré-definida ao usuário
 [SONS][README]
 Tem que ensinar o usuário de linuq a habilitar sons no terminal antes de executar o software.
 
+[BUGS][RISCO-MINIMO]
+Descobri que se o usuário pressionar a tecla "Enter", o prompt acaba recebendo "\n", pulando
+a parte que o usuário digita o prompt, não é um bug crítico, então eu n sei se vou arrumar.
+
 [SOBRE COMPATIBILIDADE]
 De início eu vou desenvolver o software para linux, e depois que a versão de linux
 estiver pronta eu jogo o código para a main, e depois eu abro uma branch

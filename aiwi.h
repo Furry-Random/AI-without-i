@@ -38,4 +38,7 @@ int n_random_ad();
 //exibe um anuncio de acordo com o numero gerado por "n_random_ad()"
 void print_ad(int n);
 
+//fecha a IA caso o usuário degite "SAIR" no prompt
+void sai_ao_digitar_sair(char prompt[]);
+
 #endif

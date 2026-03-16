@@ -115,3 +115,28 @@ int n_random_ad(){
     return n;
 
 }
+
+//fecha a IA caso o usuário degite "SAIR" no prompt
+void sai_ao_digitar_sair(char prompt[]){
+
+    if (strcmp(prompt, "SAIR") == 0 || strcmp(prompt, "sair") == 0){
+
+        falso_processamento(prompt);
+
+        clear_terminal();
+        sleep(2);
+
+        printf("Desconectando");
+        fflush(stdout);
+
+        for (int i = 0; i < 5; i++) {
+
+            sleep(1);
+            printf(".");
+            fflush(stdout);
+        }
+
+        clear_terminal();
+        exit(0);
+    }
+}

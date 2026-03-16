@@ -30,12 +30,14 @@ int main(){
     //exibe a saudação
     int dado_saud = (rand() % MAX_SAUDACAO) + 1;
     print_saudacao(dado_saud);
-    sleep(1);                   
+    sleep(1);
+    printf("Dica: digite ""SAIR"" no prompt para encerrar a IA\n\n");
+    sleep(1);
 
     while (true) {
 
         usr_input(prompt); //o usuário digita um prompt
-        //[TODO], chame a funcao que verifica se prompt == "SAIR" aqui
+        sai_ao_digitar_sair(prompt);
         
         if (cont_msg >= MAX_MSG && usr_free) {
             
@@ -51,9 +53,11 @@ int main(){
             dado_saud = (rand() % MAX_SAUDACAO) + 1;
             print_saudacao(dado_saud);
             sleep(1);
+            printf("Dica: digite ""SAIR"" no prompt para encerrar a IA\n\n");
+            sleep(1);
 
             usr_input(prompt);
-            //[TODO], chame a funcao que verifica se prompt == "SAIR" aqui
+            sai_ao_digitar_sair(prompt);
         }
 
         falso_processamento(prompt);
