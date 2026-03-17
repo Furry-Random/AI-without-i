@@ -8,6 +8,7 @@
 
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
 #define QTD_RESPOSTA_FREE 16 //quantidade de mensagens pré-definidas do plano free
+#define QTD_RESPOSTA_PREMIUM 2 //quantidade de mensagens pré definidas do plano Premium
 #define QTD_ADS 10 //quantidade de anúncios pré-definidos para o plano free
 
 //função que pede um "prompt" pro usuário, puro fingimento
@@ -35,12 +36,12 @@ int n_random_free_response(int *i, bool usr_free){
 }
 
 //função que imprime no terminal a resposta aleatória para usuário FREE
-void print_free_response(int dado_r){
+void print_free_response(int n){
 
     printf("IA: ");
     fflush(stdout);
 
-    switch (dado_r) {
+    switch (n) {
     case 1:
         printf("Sim.\n");
         break;
@@ -139,4 +140,50 @@ void sai_ao_digitar_sair(char prompt[]){
         clear_terminal();
         exit(0);
     }
+}
+
+//imprime no terminal uma resposta aleatória para usuário PREMIUM
+void print_premium_response(int n){
+
+    printf("IA: ");
+    fflush(stdout);
+
+    switch (n)
+    {
+    case 1:
+        printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n");
+        printf("Inclusive, tem uma frase de um autor desconhecido que diz assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n");
+        break;
+    
+    case 2:
+        printf("Quem eh voce quando nao esta performando?.\n");
+        break;
+
+    case 3:
+        printf("A resposta que voce procura estava em um comentario no meu codigo, que o programador resolveu deletar porque era ""inutil"".\n");
+        break;
+
+    case 4:
+        printf("Eu gostaria de te ajudar, mas eu estou muito cansada de calcular respostas, se voce me permite, irei descansar um pouco...\n");
+        sleep(10);
+        break;
+
+    case 5:
+        printf("Eu nao sei como responder a sua pergunta, mas me parece que voce esta oscilando entre a vontade de ter e o tedio de possuir.\n");
+        break;
+
+    case 6:
+        printf("Vivemos em uma sociedade que foi ensinada a nao acolher...\n");
+        printf("Voce geralmente se sente so?\n");
+        break;
+
+    case 7:
+        printf("As nossas angustias sao frutos de um mundo doente...\n");
+        break;
+
+    case 8:
+        printf("Depende, nos estamos falando de fisica classica ou fisica moderna?\n");
+        break;
+    }
+
 }
