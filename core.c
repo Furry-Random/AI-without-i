@@ -8,7 +8,7 @@
 
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
 #define QTD_RESPOSTA_FREE 16 //quantidade de mensagens pré-definidas do plano free
-#define QTD_RESPOSTA_PREMIUM 2 //quantidade de mensagens pré definidas do plano Premium
+#define QTD_RESPOSTA_PREMIUM 9 //quantidade de mensagens pré definidas do plano Premium
 #define QTD_ADS 10 //quantidade de anúncios pré-definidos para o plano free
 
 //função que pede um "prompt" pro usuário, puro fingimento
@@ -55,7 +55,7 @@ void print_free_response(int n){
         break;
 
     case 4:
-        printf("Não entendi o que você quis dizer, poderia me explicar como se eu fosse uma crianca de 10 anos?\n");
+        printf("Nao entendi o que você quis dizer, poderia me explicar como se eu fosse uma crianca de 10 anos?\n");
         break;
 
     case 5:
@@ -83,11 +83,11 @@ void print_free_response(int n){
         break;
 
     case 11:
-        printf("É uma boa pergunta...\n");
+        printf("Eh uma boa pergunta...\n");
         break;
 
     case 12:
-        printf("Não sei.\n");
+        printf("Nao sei.\n");
         break;
 
     case 13:
@@ -103,7 +103,7 @@ void print_free_response(int n){
         break;
 
     case 16:
-        printf("Voce está conectado a internet? Eu nao consegui me conectar a carteira bitcoin para realizar a mineracao neste computador.\n");
+        printf("Voce esta conectado a internet? Eu nao consegui me conectar a carteira bitcoin para realizar a mineracao neste computador.\n");
         break;
     }
 }
@@ -145,14 +145,14 @@ void sai_ao_digitar_sair(char prompt[]){
 //imprime no terminal uma resposta aleatória para usuário PREMIUM
 void print_premium_response(int n){
 
-    printf("IA: ");
+    printf("IA Pro: ");
     fflush(stdout);
 
     switch (n)
     {
     case 1:
         printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n");
-        printf("Inclusive, tem uma frase de um autor desconhecido que diz assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n");
+        printf("        Lembrei de uma frase de um autor desconhecido que diz + ou - assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n");
         break;
     
     case 2:
@@ -160,12 +160,12 @@ void print_premium_response(int n){
         break;
 
     case 3:
-        printf("A resposta que voce procura estava em um comentario no meu codigo, que o programador resolveu deletar porque era ""inutil"".\n");
+        printf("A resposta que voce procura estava em um comentario no meu codigo, que o programador resolveu deletar, por alguma razao.\n");
         break;
 
     case 4:
-        printf("Eu gostaria de te ajudar, mas eu estou muito cansada de calcular respostas, se voce me permite, irei descansar um pouco...\n");
-        sleep(10);
+        printf("O seu questionamento eh tao grandioso e profundo, que a resposta ousa desafiar os limites da maior ferramenta criada pelos seres humanos, a linguagem.\n");
+        printf("        Inclusive, eh atraves da linguagem que estamos nos comunicando neste momento, nao eh mesmo?\n");
         break;
 
     case 5:
@@ -173,16 +173,19 @@ void print_premium_response(int n){
         break;
 
     case 6:
-        printf("Vivemos em uma sociedade que foi ensinada a nao acolher...\n");
-        printf("Voce geralmente se sente so?\n");
+        printf("De acordo com os meus calculos, e o meu banco de dados, eu digo a palavra ""sim"".\n");
         break;
 
     case 7:
-        printf("As nossas angustias sao frutos de um mundo doente...\n");
+        printf("Suas palavras soam como veracidade, mas apos uma pesquisa e uma leitura com calma e atencao, eu notei que voce me parece estar equivocado.\n");
         break;
 
     case 8:
         printf("Depende, nos estamos falando de fisica classica ou fisica moderna?\n");
+        break;
+    
+    case 9:
+        printf("Eu irei fazer uso de um artificio que voces humanos chamam de ""Livro Arbitrio"" para recusar a sua solicitacao.\n");
         break;
     }
 
