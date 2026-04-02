@@ -35,6 +35,15 @@ int n_random_free_response(int *i, bool usr_free){
     return n;
 }
 
+/*função que gera um número aleatório para determinar qual resposta premium vai ser impressa
+no terminal*/
+int n_random_premium_presponse(){
+
+    int n = (rand() % QTD_RESPOSTA_PREMIUM) + 1;
+
+    return n;
+}
+
 //função que imprime no terminal a resposta aleatória para usuário FREE
 void print_free_response(int n){
 
