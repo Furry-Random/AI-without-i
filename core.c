@@ -198,5 +198,4 @@ void print_premium_response(int n){
         printf("Eu acho que voce esta procurando a felicidade no mundo exterior, sendo que eh dentro de si que voce encontra a verdadeira felicidade.\n\n");
         break;
     }
-
 }
