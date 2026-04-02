@@ -11,11 +11,18 @@ void clear_terminal();
 para usuário FREE*/
 int n_random_free_response(int *i, bool usr_free);
 
+/*função que gera um número aleatório para determinar qual resposta premium vai ser impressa
+no terminal*/
+int n_random_premium_presponse();
+
 //imprime uma saudacao dependendo do valor de n (dado_saud)
 void print_saudacao(int n);
 
-//função que imprime no terminal a resposta aleatória para usuário FREE
-void print_free_response(int dado_r);
+//função que imprime no terminal uma resposta aleatória para usuário FREE
+void print_free_response(int n);
+
+//imprime no terminal uma resposta aleatória para usuário PREMIUM
+void print_premium_response(int n);
 
 //funcao que trava o usuário em uma tela de "assinatura de plano premium"
 void ia_premium_ad();

@@ -13,7 +13,8 @@
 int main(){
     
     //variáveis
-    int dado_r;              //armazena um numero aleatorio, para selecionar uma resposta pré-definida
+    int n_free_response;              //armazena um numero aleatorio, para selecionar uma resposta pré-definida
+    int n_premium_response;
     int cont_msg = 0;        //armazena a qauntidade de mensagens enviadas a IA
     char prompt[MAX_PROMPT]; //armazena o prompt do usuário
     bool usr_free = true;    /*diz se o usuário está usando o "plano gratuíto" ou o "plano premium"
@@ -61,14 +62,19 @@ int main(){
         }
 
         falso_processamento(prompt);
-        dado_r = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
-        print_free_response(dado_r);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
-
-        //exibe um anuncio, caso o usuário seja free
-        if (usr_free) {
-
+        
+        if (usr_free){
+            
+            n_free_response = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
+            print_free_response(n_free_response);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
+            
             n_ad = n_random_ad();
             print_ad(n_ad);
+        
+        } else {
+
+            n_premium_response = n_random_premium_presponse();
+            print_premium_response(n_premium_response);
         }
     }
     
