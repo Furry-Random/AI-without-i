@@ -8,7 +8,7 @@
 
 #define MAX_PROMPT 301 //tamanho do prompt (300 caracteres)
 #define QTD_RESPOSTA_FREE 16 //quantidade de mensagens pré-definidas do plano free
-#define QTD_RESPOSTA_PREMIUM 9 //quantidade de mensagens pré definidas do plano Premium
+#define QTD_RESPOSTA_PREMIUM 10 //quantidade de mensagens pré definidas do plano Premium
 #define QTD_ADS 10 //quantidade de anúncios pré-definidos para o plano free
 
 //função que pede um "prompt" pro usuário, puro fingimento
@@ -186,6 +186,10 @@ void print_premium_response(int n){
     
     case 9:
         printf("Eu irei fazer uso de um artificio que voces humanos chamam de ""Livro Arbitrio"" para recusar a sua solicitacao.\n");
+        break;
+
+    case 10:
+        printf("Eu acho que voce esta procurando a felicidade no mundo exterior, sendo que eh dentro de si que voce encontra a verdadeira felicidade.\n");
         break;
     }
 
