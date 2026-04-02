@@ -27,10 +27,7 @@ int n_random_free_response(int *i, bool usr_free){
 
     int n = (rand() % QTD_RESPOSTA_FREE) + 1;
     
-    if (usr_free) {
-
-        *i = *i + 1;
-    }
+    *i = *i + 1;
 
     return n;
 }
