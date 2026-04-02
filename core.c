@@ -157,7 +157,7 @@ void print_premium_response(int n){
     switch (n)
     {
     case 1:
-        printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n\n");
+        printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n");
         printf("Lembrei de uma frase de um autor desconhecido que diz + ou - assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n\n");
         break;
     
