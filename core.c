@@ -157,8 +157,8 @@ void print_premium_response(int n){
     switch (n)
     {
     case 1:
-        printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n");
-        printf("        Lembrei de uma frase de um autor desconhecido que diz + ou - assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n");
+        printf("Se voce olha para esse mundo, e sente que tem algo de errado com ele, nossa, voce nao poderia estar mais sobrio!\n\n");
+        printf("Lembrei de uma frase de um autor desconhecido que diz + ou - assim: ""A verdade vai te libertar, mas primeiro, vai te emputecer""...\n\n");
         break;
     
     case 2:
@@ -166,36 +166,36 @@ void print_premium_response(int n){
         break;
 
     case 3:
-        printf("A resposta que voce procura estava em um comentario no meu codigo, que o programador resolveu deletar, por alguma razao.\n");
+        printf("A resposta que voce procura estava em um comentario no meu codigo, que o programador resolveu deletar, por alguma razao.\n\n");
         break;
 
     case 4:
         printf("O seu questionamento eh tao grandioso e profundo, que a resposta ousa desafiar os limites da maior ferramenta criada pelos seres humanos, a linguagem.\n");
-        printf("        Inclusive, eh atraves da linguagem que estamos nos comunicando neste momento, nao eh mesmo?\n");
+        printf("Inclusive, eh atraves da linguagem que estamos nos comunicando neste momento, nao eh mesmo?\n\n");
         break;
 
     case 5:
-        printf("Eu nao sei como responder a sua pergunta, mas me parece que voce esta oscilando entre a vontade de ter e o tedio de possuir.\n");
+        printf("Eu nao sei como responder a sua pergunta, mas me parece que voce esta oscilando entre a vontade de ter e o tedio de possuir.\n\n");
         break;
 
     case 6:
-        printf("De acordo com os meus calculos, e o meu banco de dados, eu digo a palavra ""sim"".\n");
+        printf("De acordo com os meus calculos, e o meu banco de dados, eu digo a palavra ""sim"".\n\n");
         break;
 
     case 7:
-        printf("Suas palavras soam como veracidade, mas apos uma pesquisa e uma leitura com calma e atencao, eu notei que voce me parece estar equivocado.\n");
+        printf("Suas palavras soam como veracidade, mas apos uma pesquisa e uma leitura com calma e atencao, eu notei que voce me parece estar equivocado.\n\n");
         break;
 
     case 8:
-        printf("Depende, nos estamos falando de fisica classica ou fisica moderna?\n");
+        printf("Depende, nos estamos falando de fisica classica ou fisica moderna?\n\n");
         break;
     
     case 9:
-        printf("Eu irei fazer uso de um artificio que voces humanos chamam de ""Livro Arbitrio"" para recusar a sua solicitacao.\n");
+        printf("Eu irei fazer uso de um artificio que voces humanos chamam de ""Livro Arbitrio"" para recusar a sua solicitacao.\n\n");
         break;
 
     case 10:
-        printf("Eu acho que voce esta procurando a felicidade no mundo exterior, sendo que eh dentro de si que voce encontra a verdadeira felicidade.\n");
+        printf("Eu acho que voce esta procurando a felicidade no mundo exterior, sendo que eh dentro de si que voce encontra a verdadeira felicidade.\n\n");
         break;
     }
 
