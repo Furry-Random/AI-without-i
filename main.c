@@ -15,6 +15,7 @@ int main(){
     //variáveis
     int n_free_response;              //armazena um numero aleatorio, para selecionar uma resposta pré-definida
     int n_premium_response;
+    int n_premium_response;
     int cont_msg = 0;        //armazena a qauntidade de mensagens enviadas a IA
     char prompt[MAX_PROMPT]; //armazena o prompt do usuário
     bool usr_free = true;    /*diz se o usuário está usando o "plano gratuíto" ou o "plano premium"
