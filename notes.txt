@@ -17,6 +17,14 @@ Verificar as primeiras 4 letras evita que a função feche o programa caso a pal
 "sair" exista no meio do prompt.
 Resolverei esse bug algum dia.
 
+[PEQUENO TEATRO]
+A ideia é inserir uma expressão matemática simples e pedir para a IA resolver, então ela vai 
+fingir que está processando (utilizando a função já criada para isso), e irá retornar uma resposta
+gerada por uma IA real, (chat GPT, Gemini, etc.), mas isso só acontecerá na primeira execução, após
+isso, ela irá retornar as outras respostas pré-definidas, dependendo do plano atual.
+Isso serve para dar credibilidade ao meu programa, tipo: "Veja só, a minha implementação retornou
+a resposta correta! Agora é a sua vez de testar".
+
 [SOBRE COMPATIBILIDADE]
 De início eu vou desenvolver o software para linux, e depois que a versão de linux
 estiver pronta eu jogo o código para a main, e depois eu abro uma branch
