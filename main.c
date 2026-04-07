@@ -19,6 +19,7 @@ int main(){
     char prompt[MAX_PROMPT]; //armazena o prompt do usuário
     bool usr_free = true;    /*diz se o usuário está usando o "plano gratuíto" ou o "plano premium"
     sempre começa com o plano free*/
+    bool primeiro_prompt = true;
     int n_ad; //armazena o número aleatório para escolher um anuncio aleatorio
 
     //ajustes
@@ -60,23 +61,33 @@ int main(){
             usr_input(prompt);
             sai_ao_digitar_sair(prompt);
         }
-
-        falso_processamento(prompt);
         
         if (usr_free){
             
-            n_free_response = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
-            print_free_response(n_free_response);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
-            
-            n_ad = n_random_ad();
-            print_ad(n_ad);
+            //verifica se é o 1° prompt a processar
+            if (primeiro_prompt){
+    
+                primeiro_prompt = pequeno_teatro(prompt);
+                cont_msg++;
+            } else {                
+                
+                falso_processamento(prompt);
+                
+                n_free_response = n_random_free_response(&cont_msg, usr_free); //a IA gera um número aleatório
+                print_free_response(n_free_response);                          //O programa imprime uma resposta pré-definida selecionada aleatoriamente
+                
+                n_ad = n_random_ad();
+                print_ad(n_ad);
+            }
         
         } else {
+
+            falso_processamento(prompt);
 
             n_premium_response = n_random_premium_presponse();
             print_premium_response(n_premium_response);
         }
     }
-    
+
     return 0;
 }

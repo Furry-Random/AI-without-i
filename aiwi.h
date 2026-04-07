@@ -48,4 +48,7 @@ void print_ad(int n);
 //fecha a IA caso o usuário degite "SAIR" no prompt
 void sai_ao_digitar_sair(char prompt[]);
 
+//executa um "pequeno teatro", para fingir que a IA funciona de verdade, retorna false
+bool pequeno_teatro(char prompt[]);
+
 #endif

@@ -218,6 +218,37 @@ void falso_processamento(char str[]){
     printf("\n");
 }
 
+//executa um "pequeno teatro", para fingir que a IA funciona de verdade, retorna false
+bool pequeno_teatro(char prompt[]){
+
+    falso_processamento(prompt);
+
+    printf("Vamos resolver passo a passo:\n");
+
+    sleep(3);
+
+    printf("    1. Primeiro resolvemos a potencia: 4² = 16\n");
+    printf("    2. Depois a divisao: 16 / 8 = 2\n");
+    printf("A expressao fica:\n");
+
+    sleep(1);
+
+    printf("2x - 10 + 2 = 0\n");
+    printf("    3. Somamos os numeros: -10 + 2 = -8\n");
+    printf("       Fica: 2x -8 = 0\n");
+    printf("    4. Somamos 8 dos dois lados:\n");
+    printf("       2x = 8\n");
+
+    sleep(5);
+
+    printf("    5. Dividimos por 2:\n");
+    printf("       x = 4\n");
+    printf("\n");
+    printf("Resposta final: x = 4\n\n");
+
+    return false;
+}
+
 //finge auto-destruição e fecha o programa
 void auto_destruicao(){
 
